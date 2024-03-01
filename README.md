@@ -7,7 +7,7 @@
 
 ## Live Site
 
-[click here](./)
+[click here](https://miamarmeladenbrot.github.io/ArtJunkies/index.html)
 
 ## Screenshots
 
