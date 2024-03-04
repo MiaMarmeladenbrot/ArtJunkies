@@ -13,7 +13,7 @@
 
 ![](./assets/img/Bildschirmfoto%202024-03-01%20um%2016.48.26.png)
 
-![](./assets/img/Bildschirmfoto%202024-03-01%20um%2016.54.11.png)
+![](./assets/img/Bildschirmfoto%202024-03-04%20um%2010.41.49.png)
 
 ## Author
 
