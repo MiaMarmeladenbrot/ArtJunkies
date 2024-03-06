@@ -5,7 +5,7 @@ const submitBtn = document.querySelector("#submit-btn");
 // ! Funktion, um Art-Daten über User-Input zu fetchen
 const fetchData = () => {
   const searchInput = document.querySelector("#search-input").value;
-  // console.log(searchInput);
+  console.log(searchInput);
 
   // * 1. Fetch, um Suchinput in der API zu suchen:
   fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${searchInput}
@@ -44,6 +44,8 @@ const fetchData = () => {
       });
     })
     .catch((err) => console.log("fehler im 1. Loop", err));
+
+  console.log(searchInput);
 };
 
 // ! EventListener auf submit-Button
@@ -59,4 +61,9 @@ submitBtn.addEventListener("click", (event) => {
 
   // * Funktionsaufruf, um die Daten zu fetchen:
   fetchData();
+
+  // # Input-Value zurücksetzen auf "", bevor ein neues Suchwort eingegeben wurde, damit sich die Suchwörter nicht addieren; das Folgende scheint nicht zu funktionieren:
+  // document.querySelector("form").reset();
+  // event.target.reset();
+  // # aber: wenn ich mir input Value in Konsole anzeigen lasse, ist er auch jedes Mal nur das eine Suchwort - warum dann andere Ergebnisse?
 });
