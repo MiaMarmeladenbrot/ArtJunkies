@@ -57,6 +57,9 @@ a {
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px 10px;
+
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
 /* ! Home Page */
@@ -68,8 +71,6 @@ header {
   height: 100vh;
   color: white;
   padding: 2rem;
-
-  /* margin-bottom: 3rem; */
 }
 
 .less-height {
@@ -110,7 +111,7 @@ nav a {
 }
 
 .explain p {
-  max-width: 45ch;
+  max-width: 50ch;
   margin-bottom: 3rem;
 }
 
@@ -149,8 +150,9 @@ form input[type="text"] {
 /* ! Main - Search-Output */
 .search-output {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
 
   margin: 0 3rem;
 }
@@ -161,33 +163,30 @@ form input[type="text"] {
   align-items: center;
   text-align: center;
 
-  justify-self: center;
-
-  background-color: #f0f1f1;
+  box-shadow: 0 0 15px #d7d7d7;
   border-radius: 20px;
 
   overflow: hidden;
-
-  /* padding: 1rem; */
-
-  /* max-width: 50rem; */
 }
 
-/* # noch machen: padding für texte im div einfügen, aber nicht fürs Bild */
+.search-output img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
 
 .search-output img,
 .search-output p,
 .search-output h3,
 .search-output h4 {
   margin-bottom: 10px;
+  font-family: LibreCaslon, "Times New Roman", Times, serif;
 }
 
-/* .search-output img {
-  width: 250px;
-} */
-
 .button {
-  background-color: #515b60;
+  font-family: LibreCaslon, "Times New Roman", Times, serif;
+  /* background-color: #515b60; */
+  background-color: #aa4d33de;
   border-radius: 10px;
   padding: 5px 15px;
   width: 12rem;
@@ -217,7 +216,14 @@ form input[type="text"] {
 }
 
 /* # Media Queries */
-/* # Media Queries Tablet */
+/* # Zwischengröße größer als 1500px */
+@media only screen and (min-width: 1500px) {
+  .search-output {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* # Media Queries Tablet 768px */
 @media only screen and (max-width: 768px) {
   .search-output {
     grid-template-columns: repeat(2, 1fr);
@@ -228,14 +234,19 @@ form input[type="text"] {
   }
 }
 
-/* # Media Queries Mobile */
+/* # Media Queries Mobile 567px */
 @media only screen and (max-width: 567px) {
   header {
     height: unset;
+    min-height: 100vh;
   }
 
   .less-height {
-    height: unset;
+    min-height: unset;
+  }
+
+  nav {
+    margin-bottom: 10rem;
   }
 
   .search-output {
